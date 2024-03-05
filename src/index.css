@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* UNIVERSAL */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 20px;
+  border: 3px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+/* COLOR PALETTE */
+
+:root {
+  --color-primary: rgb(255, 31, 68);
+  --color-secondary: rgb(215, 139, 165);
+  --color-dark: #030303;
+  --color-text: #fff;
+  --color-border: rgba(245, 236, 240, 0.267);
+}
+
+/* TYPOGRAPHY */
+
+html {
+  font-size: 62.5%;
+  color: var(--color-text);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 10rem;
+  text-shadow: 0 0 50px var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+/* FLEX */
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.justify--center {
+  justify-content: center;
+}
+
+.justify--between {
+  justify-content: space-between;
+}
+
+.align--center {
+  align-items: center;
+}
+
+.gap {
+  gap: 2rem;
+}
+
+/* BLOCKS */
+
+.block {
+  padding: 7rem 2rem;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* INPUT */
+
+.input {
+  border: 0;
+  outline: 0;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px var(--color-primary);
+  background: transparent;
+  padding-left: 1.5rem;
+  width: 100%;
+}
+
+.input__heading {
+  background-color: var(--color-dark);
+  padding: 1rem 2rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.input__container {
+  background-color: #000000a6;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* INTERFACE */
+
+.interface {
+  background: radial-gradient(#00000017, var(--color-dark)),
+    url("./assets/images/brick-wall.png");
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.interface__question {
+  margin-bottom: 7rem;
+}
+
+/* BUTTON */
+
+.btn {
+  border: 0;
+  outline: 0;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 1s ease;
+}
+
+.btn--primary {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-dark);
+  text-shadow: 0 0 10px var(--color-primary);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 0 100px var(--color-primary);
+  filter: brightness(125%);
+}
+
+/* ERROR */
+
+.error {
+  display: none;
+  background-color: var(--color-primary);
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-top: 5rem;
+}
+
+.error.active {
+  display: block;
+}
+
+/* CLIP */
+
+.clip {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-dark);
+}
